@@ -20,7 +20,7 @@ class DatabaseMailerExtension < Radiant::Extension
       alias_method_chain :process_mail, :database
     end
     #admin.nav["content"] << admin.nav_item(:database_mailer, "Database Mailer", "/admin/form_datas")
-    admin.tabs.add "Database Mailer", "admin/form_datas", :after => "Layouts", :visibility => [:admin]
+    admin.tabs.add "Database Mailer", "/admin/form_datas", :after => "Layouts", :visibility => [:admin]
         
     Mime::Type.register "application/vnd.ms-excel", :xls
   end
